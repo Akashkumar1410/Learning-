@@ -203,4 +203,6 @@ with open(file_path, 'w') as file:
 
 print(f"Data saved to '{file_path}'")
 
-# ther ln]mda function is callable 
+# ther lamda function is callable
+# the meaning of self  in classes #vo object jiske lie method call kliya ja rha hai 
+
