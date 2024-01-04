@@ -156,3 +156,51 @@ if result:
     print(f"The string '{input_string}' has valid parentheses.")
 else:
     print(f"The string '{input_string}' does not have valid parentheses.")
+
+
+# date 4 january 2024
+create a dictionary with maximum numner
+"""
+x= int(input(" inout a number"))
+dic=dict()
+for x in range(1,x+1):
+    dic[x]= x*x
+print(dic)"""
+# assignment 1>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+import json
+print (" dictionary ")
+dict1=dict()
+i=1
+while i<=10:
+    print("press yes--y for add new and  and No--n for exit thr program :::p:: for print the values")
+    x=(input(""))
+    if x=='y':
+        number=int(input("enter emploee number "))
+        name=input(" enter the employee name ")
+        salary=int(input(" enter salary"))
+
+        married =(input("married :True or False"))
+
+        # Convert the input to a boolean
+        married1 = married.lower() == 'true'
+
+        dict1[number]=[name,salary,married1]
+    elif x=='n':
+         print("exited")
+         break
+
+    elif x=='p':
+        #for i in range(len(dict1)):
+         print(dict1)
+         break
+
+    else:
+        print(" thanks ")
+
+file_path = r'C:\Users\HOME\PycharmProjects\data analysis\output.txt'
+with open(file_path, 'w') as file:
+    json.dump(dict1, file)
+
+print(f"Data saved to '{file_path}'")
+
+# ther ln]mda function is callable 
