@@ -331,3 +331,43 @@ while True:
 customer_manager.display_all_details()
 
 
+
+# Neural netwrok  
+perceptron:-  1. Input layer 2. hidden layer 3. weight bias  4. activation function  
+1.input layer take the input for the model in the  neauron   
+Single layer  there is one hidden laye and one neauron  
+all the procesin on thehideen layer in step 1 and step 2  
+when  we are giving input to the hidden layer with the input we give weights on basis of  dataset features   and  we take on emore parameter  called bias  
+# step 1( summatio of weights along with inputs  and bias )
+importance of weights :Z=input * weightsn #(w1*i1 +w2*i2)  the weights is used to activate the neaurons   
+Bias:- the weights are randomly initilize in some situation the weights are assigned 0  so to protext the input from 0 we give bvias with input. 
+
+
+# Step 2  :- applying the activation fuction  ( for neuron activate or deactivate )
+Activation function:- for a non linaer seprable problem  
+sigmoid activation fucntion the output will be of z is 0 to 1    
+ to reduce the error updatew the weights with new one and calculatw the loss or error    the main aim is to reduce the error to near the 0 or 0
+sungle layer is used for linear seprable problem  binary classifier 
+
+
+ # Multilayerd perception model ANN  
+ 1. forward propogation 2. backward propgation 3. activation function 4. optimizers 5 . loss function
+ 2. # loss Function s are
+    for:- regression 1. mean suared error 2. mean absolute eror 3. huber loss
+    for:-classification 1.binary cross entrophy 2. categorical cross entrophy
+ 5. # forward propogation:-
+ 6.  the parameter are usually weights and bias 
+there are two bias values b1 b2 at hiddent and output layer
+  after getting the output the output is goes to to set 2 whre the initial step 1 and step two are repat for the perdiction of the values  and the loss  is calculated through ther actual dependent value and thr predicted value.  
+ # backward propogation:-   
+  for reducing the loss to gett he accurate prediction w usually update the weights 
+   the updation of the weights again is called backward propogation  the function which which is used in the simple linear regression is used in ANN weight updation  
+   for reducing the error we use optimizer   and the optimizer is do backward propgation   
+# epochs  
+is the one iteration over the entire dataset.
+suppose we have 10 k images to train a model if we give those all 10k images to mkodel fro backward and forward progragation that process is caleed epochs  
+# batch 
+there are batchj size  for giving the dataet to a model in batchees suppose from10000 image 1000 images are givine in batch 1 and there are toatal 10  iteration for 10000 images  
+# iteration  
+
+ 
