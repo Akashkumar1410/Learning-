@@ -367,7 +367,25 @@ there are two bias values b1 b2 at hiddent and output layer
 is the one iteration over the entire dataset.
 suppose we have 10 k images to train a model if we give those all 10k images to mkodel fro backward and forward progragation that process is caleed epochs  
 # batch 
-there are batchj size  for giving the dataet to a model in batchees suppose from10000 image 1000 images are givine in batch 1 and there are toatal 10  iteration for 10000 images  
-# iteration  
-
- 
+there are batchj size  for giving the dataet to a model in batchees suppose from10000 image 1000 images are givine in batch 1 and there are toatal 10  iteration for 10000 images   
+# back propogation  
+choose a loss funtion to now the error or accuracy of the model the main aim is to reduce the error like mSE in back propogation the aim is to update the weights annd biases   formula is  weight new = weight old - learning rate 
+# memorizitation 
+the meaning of the memorization is to store the weights and biases for thr future use to make the program faster but iht has a disadvantgae it take  more memory 
+ # batch gradient decent   and  tthr stocastic gradient decent  
+ if we use the batch size as  1 then is called the BGD and if we uset the batch size based on the number of rows  then is called SGD  
+ the SGD is more accurate to give the accurate result   on doing the SGD the loss will be in unstable nature but in the  BGD the loss is in thr stable manner   
+ SGD is used thr random values to update the weights   
+ but in the BGD  the updatiion is based on all the dataset  
+ but the SGD is useful but this not givve the accurate result  but the SGD is not stuck in the local minima   but the BGD has chances to stuck innthe local minima nad do not reach to the global minima  
+ # mini batch Gradient decent  
+ it is best of both SGD BGD is we have 320 row   we pass 10 batches  in 32 epoch
+ # Vanishing gradiennt decent problem  
+  it means  in sometimewe update the weights after some time the weights hould not be chnaged   or the loss is not reduced that problem is called VGD it is motly occues  while we use the sigmoid activation fucntiopn   becaue sigmoid givethe value in 0 and 1 threshhold 0.5   this make to stop the learning to the model   
+   # how to recognize the VGDP
+   1. focus on the loss if the loss is not  decerese in the epoch thennn there id a problem of the VGDP
+   2. plot the graph of the weights and epochs fi the weights in the consistent mannner then therse is oronblem of the VGDP
+#  how to hadle the VGDP 
+1. reduce the complixity of thr model but iff we reduce the complixity we can not ble to solve the comolex problems and patterns
+2. using the relu activation function relu has if there is negative then the value will be 0 and if there is positive then the value is 1  but here si 1 problem if the activation will be 0  the derivative will also be 0 this is called the dying relu . but to resolve this the leaky relu came in existense
+3.  till now we we givwe the weights in random numner   but there are some techniques to initilizatio ther weights  1 is glorat and 2 is xavier  tecjnique 
