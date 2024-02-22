@@ -407,6 +407,10 @@ if we use the larger batch size like 8192  will give the faster reuslt and some 
  4.  we compare the dropout with the random forest algorithm.
  5.  
 # Normalization  
-normalization id the technique to make the diffrent scales data in one same scled data  usually it is calledd the data scaling  
-
- 
+normalization id the technique to make the diffrent scales data in one same scled data  usually it is calledd the data scaling    
+# dropouts :-  
+dropout are applied while making the model   if the model is overfittinh  the P or drooput value is to be increase and if thr  model is under fitting the dropout or the P value is to be decrease  
+  hint first strat apply the dropout onnthe last nodel or layer if we got some good result then we should apply on the other layers also  
+whuile working with the CNN drop is to be 0.4 or 0.5 % is give good result   
+while working with the RNN 0.2 or 0.3 value is give the good reslut 
+while w
