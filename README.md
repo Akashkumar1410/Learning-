@@ -396,11 +396,17 @@ use the number of hideen layer woith less  neurons  extend the number of layer  
 use the the sufficeint amunt of neurns in the hidden layer  if there is ooverfittin in the model htne  reduce the number of neurons   
 # batch size  
 if we use the mini batch sizs  like 8 to 32 in epoch  will be  slow but  give the  etter result  
-if we use the larger batch size like 8192  will give the faster reuslt and some time its not give the good reslt  but there is solution to imporve :-warming up the learning rate  increase the learning rate on evevry epoch iteratiin  
+if we use the larger batch size like 8192  will give the faster reuslt and some time its not give the good reslt  but there is solution to imporve :-warming up the learning rate or learning rate scheduler  increase the learning rate on evevry epoch iteratiin  
  in summary first uset the greater batch size  if we donnt got the better result then shift to the lesser  bathc size.  
 # epoch   
  apply the larger number of epoch with early stoppin  
-  early stopping means to observe the accuracy of the model when there is no change in the accueacyof the modle on ongoin epoch thenb stop   there is a method  in keras " callback" feature   
-  
-  
+ # prevvent the model from the overfitting   
+ 1. "early stopping" means to observe the accuracy of the model when there is no change in the accueacy of the modle on ongoin epoch thenb stop   there is a method  in keras " callback" feature    to deal with the overfitting uset he dropout methods
+ 2. regularization :- l1 and l2
+ 3. dropout is the ethod to precent from overfitting :-  dropout means  the suppose there are 10 epoch in the moodel  adn in the eveery epoch we can remove some nodes in thr  hidden layer and the input layer    soo  iot means in every epoch we can use the different artichure of neuron network.dropout lyer is initiloze by P =0.5 means thr 50% of the  nodes the value is changable on the user input or devlepor  this process is called ensemmble learning   and the droput is appplied on the training data not on the testing data 
+ 4.  we compare the dropout with the random forest algorithm.
+ 5.  
+# Normalization  
+normalization id the technique to make the diffrent scales data in one same scled data  usually it is calledd the data scaling  
+
  
