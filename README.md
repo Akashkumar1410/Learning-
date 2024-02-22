@@ -388,4 +388,19 @@ the meaning of the memorization is to store the weights and biases for thr futur
 #  how to hadle the VGDP 
 1. reduce the complixity of thr model but iff we reduce the complixity we can not ble to solve the comolex problems and patterns
 2. using the relu activation function relu has if there is negative then the value will be 0 and if there is positive then the value is 1  but here si 1 problem if the activation will be 0  the derivative will also be 0 this is called the dying relu . but to resolve this the leaky relu came in existense
-3.  till now we we givwe the weights in random numner   but there are some techniques to initilizatio ther weights  1 is glorat and 2 is xavier  tecjnique 
+3.  till now we we givwe the weights in random numner   but there are some techniques to initilizatio ther weights  1 is glorat and 2 is xavier  tecjnique  
+# how to improve the neural network   
+1. fine turning the NN hyperparameter.  :- number of hidde layer ,, number of neuron per layer ,, Learning rate and optimizer  . activation function  and last the epochs . meanns how many epooch run on the model
+# number of hidden layer:-  
+use the number of hideen layer woith less  neurons  extend the number of layer  till themodel is overfitted   whrn the model will be overfitthen stop.  
+use the the sufficeint amunt of neurns in the hidden layer  if there is ooverfittin in the model htne  reduce the number of neurons   
+# batch size  
+if we use the mini batch sizs  like 8 to 32 in epoch  will be  slow but  give the  etter result  
+if we use the larger batch size like 8192  will give the faster reuslt and some time its not give the good reslt  but there is solution to imporve :-warming up the learning rate  increase the learning rate on evevry epoch iteratiin  
+ in summary first uset the greater batch size  if we donnt got the better result then shift to the lesser  bathc size.  
+# epoch   
+ apply the larger number of epoch with early stoppin  
+  early stopping means to observe the accuracy of the model when there is no change in the accueacyof the modle on ongoin epoch thenb stop   there is a method  in keras " callback" feature   
+  
+  
+ 
