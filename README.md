@@ -388,7 +388,8 @@ the meaning of the memorization is to store the weights and biases for thr futur
 #  how to hadle the VGDP 
 1. reduce the complixity of thr model but iff we reduce the complixity we can not ble to solve the comolex problems and patterns
 2. using the relu activation function relu has if there is negative then the value will be 0 and if there is positive then the value is 1  but here si 1 problem if the activation will be 0  the derivative will also be 0 this is called the dying relu . but to resolve this the leaky relu came in existense
-3.  till now we we givwe the weights in random numner   but there are some techniques to initilizatio ther weights  1 is glorat and 2 is xavier  tecjnique  
+3.  till now we we givwe the weights in random numner   but there are some techniques to initilizatio ther weights  1 is glorat and 2 is xavier  tecjnique
+
 # how to improve the neural network   
 1. fine turning the NN hyperparameter.  :- number of hidde layer ,, number of neuron per layer ,, Learning rate and optimizer  . activation function  and last the epochs . meanns how many epooch run on the model
 # number of hidden layer:-  
@@ -401,6 +402,8 @@ if we use the larger batch size like 8192  will give the faster reuslt and some 
 # epoch   
  apply the larger number of epoch with early stoppin  
  # prevvent the model from the overfitting   
+ # overfitting is th problem where the model is give the good result onn the testing results of the datset but when you give the unseen or new data  then the model will not give the good result  plot the decision boundry on the training data and the testing data (plot_decision_regions)
+
  1. "early stopping" means to observe the accuracy of the model when there is no change in the accueacy of the modle on ongoin epoch thenb stop   there is a method  in keras " callback" feature    to deal with the overfitting uset he dropout methods
  2. regularization :- l1 and l2
  3. dropout is the ethod to precent from overfitting :-  dropout means  the suppose there are 10 epoch in the moodel  adn in the eveery epoch we can remove some nodes in thr  hidden layer and the input layer    soo  iot means in every epoch we can use the different artichure of neuron network.dropout lyer is initiloze by P =0.5 means thr 50% of the  nodes the value is changable on the user input or devlepor  this process is called ensemmble learning   and the droput is appplied on the training data not on the testing data 
@@ -413,4 +416,12 @@ dropout are applied while making the model   if the model is overfittinh  the P 
   hint first strat apply the dropout onnthe last nodel or layer if we got some good result then we should apply on the other layers also  
 whuile working with the CNN drop is to be 0.4 or 0.5 % is give good result   
 while working with the RNN 0.2 or 0.3 value is give the good reslut 
-while w
+while woriking withn the ANN 0.1 --0.5  will give the good result 
+
+# regularization ( is the technique to prevent the model from the over fitting ) (L1 and L2)  
+the L2 is the cmost commomn in the deep learning 
+the  term penality is used in the regularizing  penality is the value   square of all the weights and sum of all that eights in the loss function.   this make the weigts to the zeros values  near to the zero .in the code  of firdt layer (kernal_regularizer=tensorflow .kears.regularizers.L2(0.03))   
+
+# activation function  
+ if wr dont have the activation fucntion the model wil wrok like a linear model 
+
