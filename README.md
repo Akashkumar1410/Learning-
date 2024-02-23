@@ -423,5 +423,49 @@ the L2 is the cmost commomn in the deep learning
 the  term penality is used in the regularizing  penality is the value   square of all the weights and sum of all that eights in the loss function.   this make the weigts to the zeros values  near to the zero .in the code  of firdt layer (kernal_regularizer=tensorflow .kears.regularizers.L2(0.03))   
 
 # activation function  
- if wr dont have the activation fucntion the model wil wrok like a linear model 
+ if wr dont have the activation fucntion the model wil wrok like a linear model   
+  sigmoiid is used only in the output layer whrn problem is binary classification in today time  
+  relu activation fucntion   
+in the hiden layer the relu fucntion is mostly used   
+dying relu is the dis advantage because it make the dead neuron  
+why dying relu is occured :- because it make the updted weights to 0 thismake the model to dont klearn  something from thr inputs  
+ soltions :- set low  learning rate , set the bias to the positive values ,  dont use the relu instead use the different varients of the relu   
+ # varients of  relu  :-
+ lineaar:-nleaky relu , parametric relu   nonlinearr relu :- exponential relu , scaled relu   
+  leaky relu :-  if value of Z is positive then the value of Z will e Z and if the Value of Z is in the negativve 0.01 time of Z  
+   adv ..  unnbounded , non dying relu problem , close to 0 centred    
+   expontial relu  :-
+    some time it perfome the better then the relu  its close to 0 center and its faster  better in test set data  its always continous    
+    SELU:-  coverge faster.      
+# weights initilozation techniques  :-  
+wrong techniques of weights initilizationn:-0 initiliazation set all thw weights to 0   
+good methods to initize the weights :-  
+1. Xavier  and  glorat initilizatio techniques whichis uniform and Normal  with using (Tanh activation function)
+2. He initiloiazaton technique which is uniform and normal   using (relu activation fucnction)
+ in keras  both of above are implemented
+
+# batch normalization :- it is the technique which is used for make faster to the trianing pprecess of the moodel or neuron network  its maks the normal form of the  input to the next hidden layer   and this make the good output result    it is used with the moini batch grdient decent and it work layer by layer   
+ add the (batchNormalization()) method in the keras in fron of every layer  
+ withthe help of batch normallization we can achieve higher accuracy in very less epochs   
+
+ # OptimiZers  
+ it is the techniques of increase the speed of the tarinig of the model  thr batch GD SGD and MIni BGD is also an optimers 
+ 1. learning rate  schdule is one method  of optimizer
+ 2. momentum
+ 3. adagrad adAPTIVE GRADIENT 
+ 4. NAG (Nesterov-accelerated Adaptive Moment Estimation)
+ 5. rms prop
+ 6. adam
+# to learn the optimizer first study the EWM exponantial weighted moving average     which is efine in python programming in pandas   with the helkp of (EWM(alpha=0.9)) we can calculat the EWM  
+#  momentum  
+momentum is good at high curvature consistet graduate noisy data  or it can not stuck in the local minima 
+if the pervious gradients wil take the point to the positive direcetion then the model will fastly go to that point   
+ # adagrad  
+ in this we do not fix the learning rate we can change the learning rate on the basisi of situation
+ it is use when the scale of th input feature is very different 
+  when most of thr dataoiunt in inputs are 0 that situation is called sparse.  whenn there is sparse it will create a priblem called alongated bowl problem
+   sometime  in our input feature most of the data feature or opints are 0 in that situation we can usse the adagrad algorithnm because in thtat situation it will gove good reault
+
+
+
 
