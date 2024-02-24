@@ -460,12 +460,57 @@ good methods to initize the weights :-
 #  momentum  
 momentum is good at high curvature consistet graduate noisy data  or it can not stuck in the local minima 
 if the pervious gradients wil take the point to the positive direcetion then the model will fastly go to that point   
- # adagrad  
+ # adagrad   is is mosly use in the linear regression problem and it is not use  in the comolex neiron network  because it not give the gppd results 
  in this we do not fix the learning rate we can change the learning rate on the basisi of situation
  it is use when the scale of th input feature is very different 
   when most of thr dataoiunt in inputs are 0 that situation is called sparse.  whenn there is sparse it will create a priblem called alongated bowl problem
    sometime  in our input feature most of the data feature or opints are 0 in that situation we can usse the adagrad algorithnm because in thtat situation it will gove good reault
+dis advantahgr   
+ because it wwill apoox reach to the solution but did not converge the solutionn and do not give the good results   
+ # RMS PROP :-  prop for propogattion :-  
+ RMS prop ha
+ s no disadvantage because it can definatily reach ton the minima  where the adagrad somtime fails to rech the minima  but afterr th rmsprop the adam has came in existence 
+  but rmsprop compete the adagrad  
+  # adam :-  
+  it is the most powerfulk optimization technique   it is used in the RNN and ANN and CNN  
+   in the deep learninng try the bothnadma and rmsprop
 
 
 
+# keras hyper parameter tuning :- (keras tuner)   read the kers tuner documentation  
 
+ we dont able to try all the optimizer so we implemnet the hyper paramter tuning in kras 
+
+ first check the correlation with the indeoended and indeoendent data columns   
+ df.corr()['column name'] chekc the correlation  and then select rhe highest relation columns only 
+  with the help of keras tuner we can automaticcaly finout the best parameter for out model  
+   like which activattion fucntion which optimizer how many nodes in one layer  loss fucntion  we can automaticcaly find.  
+   first learn how to selext  
+   1. appropriate optimier
+   2. number of nodes
+   3. number of hidden layers
+   4. and in,last lean all in in one selection
+import kearas tuner :- which tell the best optimizer 
+create a funciton from keras tuner
+ and ehrn compile we usually pass the optimizer like adam or anyone but with keras as followinng   
+model .compile( optimizer=hp.choice ('optimizer'),[ loist of different optimizer like adam sgd rmsprop etc] loss ='binary_cross entrophy,metrics=[accuracy ]')  
+ and then make a  tuner object  
+tuner =kt  .Randomsearch(fucntion_name,  objective ='val_accuracy (means to increase the valdiation accuracy ) max_trials =5')  
+ and thenn search the tunner  
+tuner.search(X_train),y_train,epoch=5,valdation_data=(X_test,y_test))
+  
+this will give the best optimer s summary    
+ adn thn extract the best optimers    
+ tuner.get_best_hyperparameter ()[0].values       
+  and then extract the model from the tuner for iut data   
+  model- tuner.get_best_models(num_models=1)[0] 
+  # and then check the ummary of the model    
+  model .summary()  
+  # and thenn agian  fit the  the trained model toout datset  
+  model.fit(X_train,y_train,batcch_size=32.epoch=100,initail_epoch=6),validation data=Xtest,ytest)  
+  the initial epoch is because inn the previous kers tuner model was do the 5 epoch now the new model is trained after the 5 epoch and retain the knoeledge of the 5 epoch 
+
+# now take out the number of nodels in the layer as same :-
+units =hp.Int(8,128,step =8)  
+as same fetch the number of layers from the keras tuner   
+  as same we can   calculteall the hyperparamter like dropout in the layers of a model an =d activations funtion  and fetch the trained best models from the kerasss tuner s
