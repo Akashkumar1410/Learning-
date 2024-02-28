@@ -514,3 +514,21 @@ this will give the best optimer s summary
 units =hp.Int(8,128,step =8)  
 as same fetch the number of layers from the keras tuner   
   as same we can   calculteall the hyperparamter like dropout in the layers of a model an =d activations funtion  and fetch the trained best models from the kerasss tuner s
+
+
+  # LSTM NLP processing 
+
+LSTM is came innto existencde because the RNN  has not capable to handle the large word or sentences  
+there are twi memrry area are used in the LSTM long term memroy and shoort term mamery   
+ suppose if in the entence there is one word or oebject ismimportant we push that word into the lomg term mamemry and this LTM is give iimput to the next shoprt term memry  the process is called cell state 
+
+  there are three gate :- forgot , input, output gate  
+  the forgot gate accomplish for  to remember thinngs  in the  long term memery  
+  
+# to implement the lstm  
+firdt process is to convert the gib=ven text into token using thr tensorflow tokenizer  
+ then check the number of each word (tokenizer.word_index)  
+
+now convert all the sentenses to the number (for sentences in faq.split('/n')): print(tokenizer.text_to_sequences([sentenses]))  
+
+ 
