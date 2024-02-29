@@ -532,3 +532,13 @@ firdt process is to convert the gib=ven text into token using thr tensorflow tok
 now convert all the sentenses to the number (for sentences in faq.split('/n')): print(tokenizer.text_to_sequences([sentenses]))  
 
  
+
+# NLP
+
+# the pipeline  
+Raw data --> text processing --> text vectorization --> and then th model buling came in exeistence   for thr nlp  purpose  the moslty alogirttm s are used  in naive bias and deep leqaring  the RNN CNN is used  
+ # text classification :-   heuristic approaches   APIS   ML    DL    
+
+
+ # pos part of speech tagging   
+ it is an preproceeeing process kof the data   measn  extract the named entity recognition 
