@@ -542,3 +542,6 @@ Raw data --> text processing --> text vectorization --> and then th model buling
 
  # pos part of speech tagging   
  it is an preproceeeing process kof the data   measn  extract the named entity recognition 
+
+
+generative ai  coursera googgle data analytical professional certificate 
