@@ -545,3 +545,33 @@ Raw data --> text processing --> text vectorization --> and then th model buling
 
 
 generative ai  coursera googgle data analytical professional certificate 
+
+
+
+
+# learning sql 
+
+
+# CREATE DATABASE punjabi_text_generator; 
+for creatinf the database 
+th databse  name  is case senstive 
+  
+# CREATE DATABASE PUNJBABI_TEXT_GENERATOR;  
+# DROP DATABASE  PUNJBABI_TEXT_GENERATOR;  for  dropping the databse    
+
+
+# USE punjabi_text_generator;  for  using the database  for  further use   use (databse name )  
+ char datatypenn
+
+  signed  and unsigned  
+  signed :- if there are positive and negative  datatpes  in numerics  then the datatype is  signed  and    if the datatype  is only in poositive  data  thenn is  called  unsigned datatype   
+
+  # CREATE DATABSE IS NOT  EXISTS db_name; 
+  # SHOW DATABASES;  
+  # DROP DATABASE IF EXISTS db_name;
+# sselect * from student;
+then  addd data into table  
+# insert into table_name (col1,col2) VALUES (val1,val2),(val1,val2);  
+to make the combination of the primary  key  is :: PRIMARY KEY(name ,age )  
+
+to  make the foriegn key (FORIEGN KEY (same table primary key ) REFRENCES target table name (tabel primary key ))
