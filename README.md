@@ -574,4 +574,9 @@ then  addd data into table
 # insert into table_name (col1,col2) VALUES (val1,val2),(val1,val2);  
 to make the combination of the primary  key  is :: PRIMARY KEY(name ,age )  
 
-to  make the foriegn key (FORIEGN KEY (same table primary key ) REFRENCES target table name (tabel primary key ))
+to  make the foriegn key (FORIEGN KEY (same table primary key ) REFRENCES target table name (tabel primary key ))  
+ constaint  DEFAULT , CHECK , NOT NULL ,
+  the  SELECT  commmand   if we use  DISTINCT   the uqery will retunn only unique values  
+  the WHERE clause  
+  :-  the where clause  is  used to filter the  select statement 
+  
