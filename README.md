@@ -593,6 +593,11 @@ to  make the foriegn key (FORIEGN KEY (same table primary key ) REFRENCES target
 Large data sets: When dealing with millions or even billions of data points, the exhaustive nature of exact NN becomes sluggish. ANN excels in navigating vast data landscapes, delivering results swiftly.
 High-dimensional data: As dimensions climb, exact NN computations explode. ANNs dimensionality reduction techniques effectively shrink the search space and boost efficiency in complex data like images or text.
 Real-time applications: Need results instantly? Recommendation systems, fraud detection, and anomaly detection rely on real-time insights. ANN’s speed makes it ideal for these scenarios.
-Acceptable approximation: If your application can tolerate slight inaccuracies in results, ANN’s speed becomes invaluable. For example, in image search, finding visually similar images — instead of the absolute closest one — might be sufficient.  
+Acceptable approximation: If your application can tolerate slight inaccuracies in results, ANN’s speed becomes invaluable. For example, in image search, finding visually similar images — instead of the absolute closest one — might be sufficient.      
+# Choosing the right ANN 
+Before you dive into picking an ANN, there are a few things you should consider before deciding:     
+Data set size and dimensionality: Consider using locality-sensitive hashing for large and high-dimensional data and KD-trees for smaller and lower-dimensional data.   
+Desired accuracy level: If absolute precision is vital, linear scan is likely the best option — otherwise, look at LSH or Annoy for good accuracy with speed.  
+Computational resources: Annoy offers flexibility, but consider memory and processing limitations before choosing an algorithm within it.   
 
   
