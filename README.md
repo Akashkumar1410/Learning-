@@ -579,4 +579,10 @@ to  make the foriegn key (FORIEGN KEY (same table primary key ) REFRENCES target
   the  SELECT  commmand   if we use  DISTINCT   the uqery will retunn only unique values  
   the WHERE clause  
   :-  the where clause  is  used to filter the  select statement 
+
+
+
+
+  # Vector database overview   
+  These databases are designed to handle data where each entry is represented as a vector in a multi-dimensional space.   The vectors can represent a wide range of information, such as numerical features, embeddings from text or images, and even complex data like molecular structures.    Vector databases store data by using vector embeddings. Vector embeddings in vector databases refer to a way of representing objects, such as items, documents, or data points, as vectors in a multi-dimensional space. Each object is assigned a vector that captures various characteristics or features of that object.   These vectors are designed in such a way that similar objects have vectors that are closer to each other in the vector space, while dissimilar objects have vectors that are farther apart.
   
